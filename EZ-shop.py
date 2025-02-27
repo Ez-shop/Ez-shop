@@ -119,9 +119,9 @@ sportsgym_list=[]
 furniture_list=[]
 #Appliances variables
 appliances_list=[]
-name=Label(Heading,text="EZ-SHOP",font="arial 20 bold italic",bg="light pink",fg="blue").grid(row=0,column=1)
-tagline=Label(Heading,text="Shopping made easier!",font="magneto 16 italic",fg="gold",bg="black").grid(row=0,column=2,padx=280)
-Products_frame=LabelFrame(root,bd=2,relief="groove",text="Products",font="arial 16 bold",fg="dark blue")
+name=Label(Heading,text="EZ-SHOP",font="arial 20 bold italic",bg="light green",fg="blue").grid(row=0,column=1)
+tagline=Label(Heading,text="Make Shopping Easier!",font="arial 20 bold italic",fg="gold",bg="black").grid(row=0,column=2,padx=280)
+Products_frame=LabelFrame(root,bd=2,relief="groove",text="Products Item",font="arial 16 bold",fg="dark green")
 Products_frame.place(x=310,y=60,width=1040,height=620)
 label_logo_large=Label(Products_frame,image=image_logo_large,bd=2).place(x=250,y=100)
 label_enjoy=Label(Products_frame,text="Enjoy Shopping",font="castellar 20 bold").place(x=370,y=370)
