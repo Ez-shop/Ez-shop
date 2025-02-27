@@ -1,7 +1,7 @@
-# The Emporium
+# The EZ-shop
 Semester 1: Python for Computational Problem Solving Project
 
-Welcome to my E-commerce application 'The Emporium' where you can purchase various items from five categories that are as follows:
+Welcome to my E-commerce application 'EZ-shop' where you can purchase various items from five categories that are as follows:
 * Grocery
 * Electronics
 * Sports and Gym Equipment
