@@ -12,7 +12,7 @@ root=Tk()
 root.title("EZ-shop.in")
 root.geometry("600x700")
 user_id = int(sys.argv[1]) if len(sys.argv) > 1 else None
-Heading=LabelFrame(root,bd=2,relief="groove",bg="light yellow")
+Heading=LabelFrame(root,bd=2,relief="groove",bg="light green")
 Heading.place(x=0,y=0,width=1380,height=55)
 image_logo=p.Image.open("Images\Logo.png")
 image_logo_1=ptk.PhotoImage(image_logo)
@@ -71,25 +71,25 @@ appliances9_image=ptk.PhotoImage(p.Image.open("Images\Appliances_9.jpeg"))
 appliances10_image=ptk.PhotoImage(p.Image.open("Images\Appliances_10.jpeg"))
 #Grocery Variables
 clicked_grocery1=StringVar()
-clicked_grocery1.set("250g - Rs.93")
+clicked_grocery1.set("250g - Rs.100")
 clicked_grocery2=StringVar()
-clicked_grocery2.set("5kg – Rs.235")
+clicked_grocery2.set("5kg – Rs.250")
 clicked_grocery3=StringVar()
-clicked_grocery3.set("1kg – Rs.18")
+clicked_grocery3.set("1kg – Rs.20")
 clicked_grocery4=StringVar()
-clicked_grocery4.set("1L – Rs.195")
+clicked_grocery4.set("1L – Rs.200")
 clicked_grocery5=StringVar()
-clicked_grocery5.set("500g – Rs.95")
+clicked_grocery5.set("500g – Rs.100")
 clicked_grocery6=StringVar()
-clicked_grocery6.set("55g – Rs.76")
+clicked_grocery6.set("55g – Rs.75")
 clicked_grocery7=StringVar()
-clicked_grocery7.set("120g – Rs.23")
+clicked_grocery7.set("120g – Rs.25")
 clicked_grocery8=StringVar()
-clicked_grocery8.set("200g – Rs.65")
+clicked_grocery8.set("200g – Rs.70")
 clicked_grocery9=StringVar()
-clicked_grocery9.set("500g – Rs.104")
+clicked_grocery9.set("500g – Rs.105")
 clicked_grocery10=StringVar()
-clicked_grocery10.set("70g – Rs.25")
+clicked_grocery10.set("70g – Rs.30")
 grocery_list=[]
 #Electronics Variables
 clicked_electronics1=StringVar()
@@ -119,12 +119,12 @@ sportsgym_list=[]
 furniture_list=[]
 #Appliances variables
 appliances_list=[]
-name=Label(Heading,text="EZ-SHOP",font="arial 20 bold italic",bg="light green",fg="blue").grid(row=0,column=1)
-tagline=Label(Heading,text="Make Shopping Easier!",font="arial 20 bold italic",fg="gold",bg="black").grid(row=0,column=2,padx=280)
-Products_frame=LabelFrame(root,bd=2,relief="groove",text="Products Item",font="arial 16 bold",fg="dark green")
+name=Label(Heading,text="EZ-SHOP",font="arial 20 bold italic",bg="light pink",fg="blue").grid(row=0,column=1)
+tagline=Label(Heading,text="MAKE SHOPPING EASIER!",font="arial 20 bold italic",fg="gold",bg="black").grid(row=0,column=2,padx=280)
+Products_frame=LabelFrame(root,bd=2,relief="groove",text="Products Item",font="arial 15 bold",fg="dark blue")
 Products_frame.place(x=310,y=60,width=1040,height=620)
 label_logo_large=Label(Products_frame,image=image_logo_large,bd=2).place(x=250,y=100)
-label_enjoy=Label(Products_frame,text="Enjoy Shopping",font="castellar 20 bold").place(x=370,y=370)
+label_enjoy=Label(Products_frame,text="Enjoy Your Shopping Time",font="castellar 20 bold").place(x=360,y=370)
 Button_frame=LabelFrame(root,bd=2,relief="groove")
 Button_frame.place(x=2,y=60,width=300,height=380)
 
@@ -150,7 +150,7 @@ def Spaces(n,s1=" "):
 
 def GroceryCall():
     HideAllFrames()
-    Grocery_Label=Label(Products_frame,text="Grocery",font="times 15 bold",fg="gold",bg="black").grid(row=0,column=0,padx=20)
+    Grocery_Label=Label(Products_frame,text="Grocery Item",font="times 15 bold",fg="black",bg="gold").grid(row=0,column=0,padx=20)
     lf_grocery1=LabelFrame(Products_frame,bd=2,relief="groove")
     lf_grocery1.place(x=5,y=35,width=180,height=280)
     lf_grocery2=LabelFrame(Products_frame,bd=2,relief="groove")
@@ -201,16 +201,16 @@ def GroceryCall():
     label_qty_grocery8=Label(lf_grocery8,text="Qty:",bd=1,font="arial 9",justify="left").place(x=5,y=218)
     label_qty_grocery9=Label(lf_grocery9,text="Qty:",bd=1,font="arial 9",justify="left").place(x=5,y=218)
     label_qty_grocery10=Label(lf_grocery10,text="Qty:",bd=1,font="arial 9",justify="left").place(x=5,y=218)
-    options_grocery1=["250g – Rs.93","475g – Rs.166"]
-    options_grocery2=["5kg – Rs.235","10kg – Rs.394"]
-    options_grocery3=["1kg – Rs.18"]
-    options_grocery4=["1L – Rs.195"]
-    options_grocery5=["500g – Rs.95","1kg – Rs.165"]
-    options_grocery6=["55g – Rs.76","137g – Rs.175"]
-    options_grocery7=["120g – Rs.23","250g – Rs.48"]
-    options_grocery8=["200g – Rs.65","500g – Rs.150","700g – Rs.215"]
-    options_grocery9=["500g – Rs.104","1kg – Rs.160"]
-    options_grocery10=["70g – Rs.25","150g – Rs.40"]
+    options_grocery1=["1kg – Rs.200","475g – Rs.400"]
+    options_grocery2=["10kg – Rs.500","200kg – Rs.1000"]
+    options_grocery3=["1kg – Rs.40"]
+    options_grocery4=["1L – Rs.200"]
+    options_grocery5=["500g – Rs.100","2kg – Rs.300"]
+    options_grocery6=["55g – Rs.85","137g – Rs.175"]
+    options_grocery7=["130g – Rs.25","250g – Rs.48"]
+    options_grocery8=["250g – Rs.75","500g – Rs.150","700g – Rs.215"]
+    options_grocery9=["1kg – Rs.200","2kg – Rs.400"]
+    options_grocery10=["100g – Rs.40","200g – Rs.80"]
     global clicked_grocery1,clicked_grocery2,clicked_grocery3,clicked_grocery4,clicked_grocery5,grocery_list
     global clicked_grocery6,clicked_grocery7,clicked_grocery8,clicked_grocery9,clicked_grocery10
     drop_grocery1=OptionMenu(lf_grocery1,clicked_grocery1,*options_grocery1).place(x=30,y=212)
@@ -318,19 +318,19 @@ def GroceryCall():
             messagebox.showinfo("Product Status","Parle's Cream & Onion Wafers ("+clicked_grocery10.get()+") is successfully added to the cart.")
         else:
             messagebox.showinfo("Product Status","Parle's Cream & Onion Wafers ("+clicked_grocery10.get()+") is not added to the cart.")
-    add_grocery1=Button(lf_grocery1,text="Add Item",bg="green",fg="white",font="times 9 bold",command=AddG1).place(x=60,y=245)
-    add_grocery2=Button(lf_grocery2,text="Add Item",bg="green",fg="white",font="times 9 bold",command=AddG2).place(x=60,y=245)
-    add_grocery3=Button(lf_grocery3,text="Add Item",bg="green",fg="white",font="times 9 bold",command=AddG3).place(x=60,y=245)
-    add_grocery4=Button(lf_grocery4,text="Add Item",bg="green",fg="white",font="times 9 bold",command=AddG4).place(x=60,y=245)
-    add_grocery5=Button(lf_grocery5,text="Add Item",bg="green",fg="white",font="times 9 bold",command=AddG5).place(x=60,y=245)
-    add_grocery6=Button(lf_grocery6,text="Add Item",bg="green",fg="white",font="times 9 bold",command=AddG6).place(x=60,y=245)
-    add_grocery7=Button(lf_grocery7,text="Add Item",bg="green",fg="white",font="times 9 bold",command=AddG7).place(x=60,y=245)
-    add_grocery8=Button(lf_grocery8,text="Add Item",bg="green",fg="white",font="times 9 bold",command=AddG8).place(x=60,y=245)
-    add_grocery9=Button(lf_grocery9,text="Add Item",bg="green",fg="white",font="times 9 bold",command=AddG9).place(x=60,y=245)
-    add_grocery10=Button(lf_grocery10,text="Add Item",bg="green",fg="white",font="times 9 bold",command=AddG10).place(x=60,y=245)
+    add_grocery1=Button(lf_grocery1,text="Add Item",bg="blue",fg="white",font="times 9 bold",command=AddG1).place(x=60,y=245)
+    add_grocery2=Button(lf_grocery2,text="Add Item",bg="blue",fg="white",font="times 9 bold",command=AddG2).place(x=60,y=245)
+    add_grocery3=Button(lf_grocery3,text="Add Item",bg="blue",fg="white",font="times 9 bold",command=AddG3).place(x=60,y=245)
+    add_grocery4=Button(lf_grocery4,text="Add Item",bg="blue",fg="white",font="times 9 bold",command=AddG4).place(x=60,y=245)
+    add_grocery5=Button(lf_grocery5,text="Add Item",bg="blue",fg="white",font="times 9 bold",command=AddG5).place(x=60,y=245)
+    add_grocery6=Button(lf_grocery6,text="Add Item",bg="blue",fg="white",font="times 9 bold",command=AddG6).place(x=60,y=245)
+    add_grocery7=Button(lf_grocery7,text="Add Item",bg="blue",fg="white",font="times 9 bold",command=AddG7).place(x=60,y=245)
+    add_grocery8=Button(lf_grocery8,text="Add Item",bg="blue",fg="white",font="times 9 bold",command=AddG8).place(x=60,y=245)
+    add_grocery9=Button(lf_grocery9,text="Add Item",bg="blue",fg="white",font="times 9 bold",command=AddG9).place(x=60,y=245)
+    add_grocery10=Button(lf_grocery10,text="Add Item",bg="blue",fg="white",font="times 9 bold",command=AddG10).place(x=60,y=245)
 def ElectronicsCall():
     HideAllFrames()
-    Electronics_Label=Label(Products_frame,text="Electronics",font="times 15 bold",fg="gold",bg="black").grid(row=0,column=0,padx=10)
+    Electronics_Label=Label(Products_frame,text="Electronics",font="times 15 bold",fg="black",bg="gold").grid(row=0,column=0,padx=10)
     lf_electronics1=LabelFrame(Products_frame,bd=2,relief="groove")
     lf_electronics1.place(x=5,y=35,width=200,height=280)
     lf_electronics2=LabelFrame(Products_frame,bd=2,relief="groove")
@@ -499,19 +499,19 @@ def ElectronicsCall():
     price_electronics4=Label(lf_electronics4,text="Price: Rs.2,799",font="arial 9 bold").place(x=5,y=245)
     price_electronics5=Label(lf_electronics5,text="Price: Rs.699",font="arial 9 bold").place(x=5,y=245)
     price_electronics9=Label(lf_electronics9,text="Price: Rs.2,999",font="arial 9 bold").place(x=5,y=245)
-    add_electronics1=Button(lf_electronics1,text="Add Item",bg="green",fg="white",font="times 9 bold",command=AddE1).place(x=120,y=245)
-    add_electronics2=Button(lf_electronics2,text="Add Item",bg="green",fg="white",font="times 9 bold",command=AddE2).place(x=120,y=245)
-    add_electronics3=Button(lf_electronics3,text="Add Item",bg="green",fg="white",font="times 9 bold",command=AddE3).place(x=120,y=245)
-    add_electronics4=Button(lf_electronics4,text="Add Item",bg="green",fg="white",font="times 9 bold",command=AddE4).place(x=120,y=245)
-    add_electronics5=Button(lf_electronics5,text="Add Item",bg="green",fg="white",font="times 9 bold",command=AddE5).place(x=120,y=245)
-    add_electronics6=Button(lf_electronics6,text="Add Item",bg="green",fg="white",font="times 9 bold",command=AddE6).place(x=60,y=245)
-    add_electronics7=Button(lf_electronics7,text="Add Item",bg="green",fg="white",font="times 9 bold",command=AddE7).place(x=60,y=245)
-    add_electronics8=Button(lf_electronics8,text="Add Item",bg="green",fg="white",font="times 9 bold",command=AddE8).place(x=60,y=245)
-    add_electronics9=Button(lf_electronics9,text="Add Item",bg="green",fg="white",font="times 9 bold",command=AddE9).place(x=120,y=245)
-    add_electronics10=Button(lf_electronics10,text="Add Item",bg="green",fg="white",font="times 9 bold",command=AddE10).place(x=60,y=245)
+    add_electronics1=Button(lf_electronics1,text="Add Item",bg="blue",fg="white",font="times 9 bold",command=AddE1).place(x=120,y=245)
+    add_electronics2=Button(lf_electronics2,text="Add Item",bg="blue",fg="white",font="times 9 bold",command=AddE2).place(x=120,y=245)
+    add_electronics3=Button(lf_electronics3,text="Add Item",bg="blue",fg="white",font="times 9 bold",command=AddE3).place(x=120,y=245)
+    add_electronics4=Button(lf_electronics4,text="Add Item",bg="blue",fg="white",font="times 9 bold",command=AddE4).place(x=120,y=245)
+    add_electronics5=Button(lf_electronics5,text="Add Item",bg="blue",fg="white",font="times 9 bold",command=AddE5).place(x=120,y=245)
+    add_electronics6=Button(lf_electronics6,text="Add Item",bg="blue",fg="white",font="times 9 bold",command=AddE6).place(x=60,y=245)
+    add_electronics7=Button(lf_electronics7,text="Add Item",bg="blue",fg="white",font="times 9 bold",command=AddE7).place(x=60,y=245)
+    add_electronics8=Button(lf_electronics8,text="Add Item",bg="blue",fg="white",font="times 9 bold",command=AddE8).place(x=60,y=245)
+    add_electronics9=Button(lf_electronics9,text="Add Item",bg="blue",fg="white",font="times 9 bold",command=AddE9).place(x=120,y=245)
+    add_electronics10=Button(lf_electronics10,text="Add Item",bg="blue",fg="white",font="times 9 bold",command=AddE10).place(x=60,y=245)
 def SportsGymCall():
     HideAllFrames()
-    Sports_Gym_Label=Label(Products_frame,text="Sports and Gym Equipment",font="times 15 bold",fg="gold",bg="black").grid(row=0,column=0,padx=10)
+    Sports_Gym_Label=Label(Products_frame,text="Sports and Gym Equipment",font="times 15 bold",fg="black",bg="gold").grid(row=0,column=0,padx=10)
     lf_sportsgym1=LabelFrame(Products_frame,bd=2,relief="groove")
     lf_sportsgym1.place(x=5,y=35,width=200,height=280)
     lf_sportsgym2=LabelFrame(Products_frame,bd=2,relief="groove")
@@ -646,19 +646,19 @@ def SportsGymCall():
             messagebox.showinfo("Product Status","RMOUR Filled Heavy Punch Bag is successfully added to the cart.")
         else:
             messagebox.showinfo("Product Status","RMOUR Filled Heavy Punch Bag is not added to the cart.")
-    add_sportsgym1=Button(lf_sportsgym1,text="Add Item",bg="green",fg="white",font="times 9 bold",command=AddS1).place(x=68,y=245)
-    add_sportsgym2=Button(lf_sportsgym2,text="Add Item",bg="green",fg="white",font="times 9 bold",command=AddS2).place(x=68,y=245)
-    add_sportsgym3=Button(lf_sportsgym3,text="Add Item",bg="green",fg="white",font="times 9 bold",command=AddS3).place(x=68,y=245)
-    add_sportsgym4=Button(lf_sportsgym4,text="Add Item",bg="green",fg="white",font="times 9 bold",command=AddS4).place(x=68,y=245)
-    add_sportsgym5=Button(lf_sportsgym5,text="Add Item",bg="green",fg="white",font="times 9 bold",command=AddS5).place(x=68,y=245)
-    add_sportsgym6=Button(lf_sportsgym6,text="Add Item",bg="green",fg="white",font="times 9 bold",command=AddS6).place(x=68,y=245)
-    add_sportsgym7=Button(lf_sportsgym7,text="Add Item",bg="green",fg="white",font="times 9 bold",command=AddS7).place(x=68,y=245)
-    add_sportsgym8=Button(lf_sportsgym8,text="Add Item",bg="green",fg="white",font="times 9 bold",command=AddS8).place(x=68,y=245)
-    add_sportsgym9=Button(lf_sportsgym9,text="Add Item",bg="green",fg="white",font="times 9 bold",command=AddS9).place(x=68,y=245)
-    add_sportsgym10=Button(lf_sportsgym10,text="Add Item",bg="green",fg="white",font="times 9 bold",command=AddS10).place(x=68,y=245)
+    add_sportsgym1=Button(lf_sportsgym1,text="Add Item",bg="blue",fg="white",font="times 9 bold",command=AddS1).place(x=68,y=245)
+    add_sportsgym2=Button(lf_sportsgym2,text="Add Item",bg="blue",fg="white",font="times 9 bold",command=AddS2).place(x=68,y=245)
+    add_sportsgym3=Button(lf_sportsgym3,text="Add Item",bg="blue",fg="white",font="times 9 bold",command=AddS3).place(x=68,y=245)
+    add_sportsgym4=Button(lf_sportsgym4,text="Add Item",bg="blue",fg="white",font="times 9 bold",command=AddS4).place(x=68,y=245)
+    add_sportsgym5=Button(lf_sportsgym5,text="Add Item",bg="blue",fg="white",font="times 9 bold",command=AddS5).place(x=68,y=245)
+    add_sportsgym6=Button(lf_sportsgym6,text="Add Item",bg="blue",fg="white",font="times 9 bold",command=AddS6).place(x=68,y=245)
+    add_sportsgym7=Button(lf_sportsgym7,text="Add Item",bg="blue",fg="white",font="times 9 bold",command=AddS7).place(x=68,y=245)
+    add_sportsgym8=Button(lf_sportsgym8,text="Add Item",bg="blue",fg="white",font="times 9 bold",command=AddS8).place(x=68,y=245)
+    add_sportsgym9=Button(lf_sportsgym9,text="Add Item",bg="blue",fg="white",font="times 9 bold",command=AddS9).place(x=68,y=245)
+    add_sportsgym10=Button(lf_sportsgym10,text="Add Item",bg="blue",fg="white",font="times 9 bold",command=AddS10).place(x=68,y=245)
 def FurnitureCall():
     HideAllFrames()
-    Furniture_Label=Label(Products_frame,text="Furniture",font="times 15 bold",fg="gold",bg="black").grid(row=0,column=0,padx=20)
+    Furniture_Label=Label(Products_frame,text="Furniture",font="times 15 bold",fg="black",bg="gold").grid(row=0,column=0,padx=20)
     lf_furniture1=LabelFrame(Products_frame,bd=2,relief="groove")
     lf_furniture1.place(x=5,y=35,width=200,height=280)
     lf_furniture2=LabelFrame(Products_frame,bd=2,relief="groove")
@@ -799,16 +799,16 @@ def FurnitureCall():
             messagebox.showinfo("Product Status","Allie Wood Solid Wood 6 Seater Dining Set is successfully added to the cart.")
         else:
             messagebox.showinfo("Product Status","Allie Wood Solid Wood 6 Seater Dining Set is not added to the cart.")
-    add_furniture1=Button(lf_furniture1,text="Add Item",bg="green",fg="white",font="times 9 bold",command=AddF1).place(x=68,y=245)
-    add_furniture2=Button(lf_furniture2,text="Add Item",bg="green",fg="white",font="times 9 bold",command=AddF2).place(x=68,y=245)
-    add_furniture3=Button(lf_furniture3,text="Add Item",bg="green",fg="white",font="times 9 bold",command=AddF3).place(x=68,y=245)
-    add_furniture4=Button(lf_furniture4,text="Add Item",bg="green",fg="white",font="times 9 bold",command=AddF4).place(x=68,y=245)
-    add_furniture5=Button(lf_furniture5,text="Add Item",bg="green",fg="white",font="times 9 bold",command=AddF5).place(x=68,y=245)
-    add_furniture6=Button(lf_furniture6,text="Add Item",bg="green",fg="white",font="times 9 bold",command=AddF6).place(x=68,y=245)
-    add_furniture7=Button(lf_furniture7,text="Add Item",bg="green",fg="white",font="times 9 bold",command=AddF7).place(x=68,y=245)
-    add_furniture8=Button(lf_furniture8,text="Add Item",bg="green",fg="white",font="times 9 bold",command=AddF8).place(x=68,y=245)
-    add_furniture9=Button(lf_furniture9,text="Add Item",bg="green",fg="white",font="times 9 bold",command=AddF9).place(x=68,y=245)
-    add_furniture10=Button(lf_furniture10,text="Add Item",bg="green",fg="white",font="times 9 bold",command=AddF10).place(x=68,y=245)
+    add_furniture1=Button(lf_furniture1,text="Add Item",bg="blue",fg="white",font="times 9 bold",command=AddF1).place(x=68,y=245)
+    add_furniture2=Button(lf_furniture2,text="Add Item",bg="blue",fg="white",font="times 9 bold",command=AddF2).place(x=68,y=245)
+    add_furniture3=Button(lf_furniture3,text="Add Item",bg="blue",fg="white",font="times 9 bold",command=AddF3).place(x=68,y=245)
+    add_furniture4=Button(lf_furniture4,text="Add Item",bg="blue",fg="white",font="times 9 bold",command=AddF4).place(x=68,y=245)
+    add_furniture5=Button(lf_furniture5,text="Add Item",bg="blue",fg="white",font="times 9 bold",command=AddF5).place(x=68,y=245)
+    add_furniture6=Button(lf_furniture6,text="Add Item",bg="blue",fg="white",font="times 9 bold",command=AddF6).place(x=68,y=245)
+    add_furniture7=Button(lf_furniture7,text="Add Item",bg="blue",fg="white",font="times 9 bold",command=AddF7).place(x=68,y=245)
+    add_furniture8=Button(lf_furniture8,text="Add Item",bg="blue",fg="white",font="times 9 bold",command=AddF8).place(x=68,y=245)
+    add_furniture9=Button(lf_furniture9,text="Add Item",bg="blue",fg="white",font="times 9 bold",command=AddF9).place(x=68,y=245)
+    add_furniture10=Button(lf_furniture10,text="Add Item",bg="blue",fg="white",font="times 9 bold",command=AddF10).place(x=68,y=245)
 def AppliancesCall():
     HideAllFrames()
     Appliances_Label=Label(Products_frame,text="Appliances",font="times 15 bold",fg="gold",bg="black").grid(row=0,column=0,padx=20)
@@ -946,16 +946,16 @@ def AppliancesCall():
             messagebox.showinfo("Product Status","Eureka Forbes Quick Clean DX Dry Vacuum Cleaner is successfully added to the cart.")
         else:
             messagebox.showinfo("Product Status","Eureka Forbes Quick Clean DX Dry Vacuum Cleaner is not added to the cart.")
-    add_appliances1=Button(lf_appliances1,text="Add Item",bg="green",fg="white",font="times 9 bold",command=AddA1).place(x=68,y=245)
-    add_appliances2=Button(lf_appliances2,text="Add Item",bg="green",fg="white",font="times 9 bold",command=AddA2).place(x=68,y=245)
-    add_appliances3=Button(lf_appliances3,text="Add Item",bg="green",fg="white",font="times 9 bold",command=AddA3).place(x=68,y=245)
-    add_appliances4=Button(lf_appliances4,text="Add Item",bg="green",fg="white",font="times 9 bold",command=AddA4).place(x=68,y=245)
-    add_appliances5=Button(lf_appliances5,text="Add Item",bg="green",fg="white",font="times 9 bold",command=AddA5).place(x=68,y=245)
-    add_appliances6=Button(lf_appliances6,text="Add Item",bg="green",fg="white",font="times 9 bold",command=AddA6).place(x=68,y=245)
-    add_appliances7=Button(lf_appliances7,text="Add Item",bg="green",fg="white",font="times 9 bold",command=AddA7).place(x=68,y=245)
-    add_appliances8=Button(lf_appliances8,text="Add Item",bg="green",fg="white",font="times 9 bold",command=AddA8).place(x=68,y=245)
-    add_appliances9=Button(lf_appliances9,text="Add Item",bg="green",fg="white",font="times 9 bold",command=AddA9).place(x=68,y=245)
-    add_appliances10=Button(lf_appliances10,text="Add Item",bg="green",fg="white",font="times 9 bold",command=AddA10).place(x=68,y=245)
+    add_appliances1=Button(lf_appliances1,text="Add Item",bg="blue",fg="white",font="times 9 bold",command=AddA1).place(x=68,y=245)
+    add_appliances2=Button(lf_appliances2,text="Add Item",bg="blue",fg="white",font="times 9 bold",command=AddA2).place(x=68,y=245)
+    add_appliances3=Button(lf_appliances3,text="Add Item",bg="blue",fg="white",font="times 9 bold",command=AddA3).place(x=68,y=245)
+    add_appliances4=Button(lf_appliances4,text="Add Item",bg="blue",fg="white",font="times 9 bold",command=AddA4).place(x=68,y=245)
+    add_appliances5=Button(lf_appliances5,text="Add Item",bg="blue",fg="white",font="times 9 bold",command=AddA5).place(x=68,y=245)
+    add_appliances6=Button(lf_appliances6,text="Add Item",bg="blue",fg="white",font="times 9 bold",command=AddA6).place(x=68,y=245)
+    add_appliances7=Button(lf_appliances7,text="Add Item",bg="blue",fg="white",font="times 9 bold",command=AddA7).place(x=68,y=245)
+    add_appliances8=Button(lf_appliances8,text="Add Item",bg="blue",fg="white",font="times 9 bold",command=AddA8).place(x=68,y=245)
+    add_appliances9=Button(lf_appliances9,text="Add Item",bg="blue",fg="white",font="times 9 bold",command=AddA9).place(x=68,y=245)
+    add_appliances10=Button(lf_appliances10,text="Add Item",bg="blue",fg="white",font="times 9 bold",command=AddA10).place(x=68,y=245)
 Grocery_button=Button(Button_frame,text="Grocery",font="times 20 bold",width=17,bd=6,bg="cadetblue",fg="white",activebackground="light blue",command=GroceryCall)
 Grocery_button.grid(row=0,column=0,padx=5,pady=5)
 Electronics_button=Button(Button_frame,text="Electronics",font="times 20 bold",width=17,bd=6,bg="cadetblue",fg="white",activebackground="light blue",command=ElectronicsCall)
@@ -966,11 +966,11 @@ Furniture_button=Button(Button_frame,text="Furniture",font="times 20 bold",width
 Furniture_button.grid(row=3,column=0,padx=5,pady=5)
 Appliances_button=Button(Button_frame,text="Appliances",font="times 20 bold",width=17,bd=6,bg="cadetblue",fg="white",activebackground="light blue",command=AppliancesCall)
 Appliances_button.grid(row=4,column=0,padx=5,pady=5)
-Coupon_frame=LabelFrame(root,bd=2,relief="groove",text="MEGA SALE!!!",fg="green",font="arial 16 bold")
+Coupon_frame=LabelFrame(root,bd=2,relief="groove",text="BUMPPER OFFER!!!",fg="black",font="arial 16 bold")
 Coupon_frame.place(x=2,y=450,width=300,height=230)
-Coupon_1=Label(Coupon_frame,text="Get 15% Off on your purchase(upto Rs.500)",font="times 12",fg="yellow",bg="brown")
-Coupon_2=Label(Coupon_frame,text="Get 10% Off on your purchase(upto Rs.750)",font="times 12",fg="yellow",bg="brown")
-Coupon_3=Label(Coupon_frame,text="Get 5% Off on your purchase(upto Rs.1000)",font="times 12",fg="yellow",bg="brown")
+Coupon_1=Label(Coupon_frame,text="Get 20% Off on your purchase(upto Rs.5000)",font="times 12",fg="yellow",bg="brown")
+Coupon_2=Label(Coupon_frame,text="Get 25% Off on your purchase(upto Rs.10000)",font="times 12",fg="yellow",bg="brown")
+Coupon_3=Label(Coupon_frame,text="Get 30% Off on your purchase(upto Rs.20000)",font="times 12",fg="yellow",bg="brown")
 Coupon_1.grid(row=0,column=0,padx=10,pady=17)
 Coupon_2.grid(row=1,column=0,padx=10,pady=17)
 Coupon_3.grid(row=2,column=0,padx=10,pady=17)
@@ -1012,11 +1012,11 @@ def Bill():
             discount[2]=1000
         max_discount=max(discount)
         if max_discount==discount[0]:
-            suggest=Label(root,bd=1,text="Suggested : 15% Off upto Rs.500",font="times 12",fg="blue").place(x=545,y=480)
+            suggest=Label(root,bd=1,text="Suggested : 20% Off upto Rs.5000",font="times 12",fg="blue").place(x=545,y=480)
         elif max_discount==discount[1]:
-            suggest=Label(root,bd=1,text="Suggested : 10% Off upto Rs.750",font="times 12",fg="blue").place(x=545,y=480)
+            suggest=Label(root,bd=1,text="Suggested : 25% Off upto Rs.10000",font="times 12",fg="blue").place(x=545,y=480)
         else:
-            suggest=Label(root,bd=1,text="Suggested : 5% Off upto Rs.1000",font="times 12",fg="blue").place(x=545,y=480)
+            suggest=Label(root,bd=1,text="Suggested : 30% Off upto Rs.20000",font="times 12",fg="blue").place(x=545,y=480)
         def GenBill(d,choice):
             bill_area=LabelFrame(root,bd=2,relief="groove")
             bill_area.place(x=305,y=80,width=750,height=600)
@@ -1054,21 +1054,21 @@ def Bill():
                 bill_txt_area.insert(END,"\nTotal Appliances Price : Rs."+str(appliances_price)+"\n"+Spaces(90,'*'))
             bill_txt_area.insert(END,"\nTotal Price(before discount) = Rs."+str(total_price))
             if choice==1:
-                bill_txt_area.insert(END,"\nCoupon Applied : 15% Off upto Rs.500")
+                bill_txt_area.insert(END,"\nCoupon Applied : 20% Off upto Rs.5000")
             elif choice==2:
-                bill_txt_area.insert(END,"\nCoupon Applied : 10% Off upto Rs.750")
+                bill_txt_area.insert(END,"\nCoupon Applied : 25% Off upto Rs.10000")
             else:
-                bill_txt_area.insert(END,"\nCoupon Applied : 5% Off upto Rs.1000")
+                bill_txt_area.insert(END,"\nCoupon Applied : 30% Off upto Rs.20000")
             bill_txt_area.insert(END,"\nDiscount Offered : Rs."+str(d))
             bill_txt_area.insert(END,"\nTotal Price(after discount) = Rs."+str(total_price-d))
             save_button=Button(root,text="Save Invoice",font="times 20 bold",bd=6,bg="skyblue",width=10,fg="white",command=lambda:save_invoice(bill_txt_area.get("1.0",END)))
             save_button.place(x=1120,y=600)
         Coupon_frame_2=LabelFrame(root,bd=2,relief="groove",text="Apply a Coupon",fg="green",font="arial 16 bold").place(x=500,y=150,width=380,height=300)
-        Coupon_apply1=Button(Coupon_frame_2,text="15% Off upto Rs.500",font="times 20 bold",width=17,bd=6,bg="cadetblue",fg="white",activebackground="light blue",command=lambda:GenBill(discount[0],1))
+        Coupon_apply1=Button(Coupon_frame_2,text="20% Off upto Rs.5000",font="times 20 bold",width=17,bd=6,bg="cadetblue",fg="white",activebackground="light blue",command=lambda:GenBill(discount[0],1))
         Coupon_apply1.place(x=540,y=190)
-        Coupon_apply2=Button(Coupon_frame_2,text="10% Off upto Rs.750",font="times 20 bold",width=17,bd=6,bg="cadetblue",fg="white",activebackground="light blue",command=lambda:GenBill(discount[1],2))
+        Coupon_apply2=Button(Coupon_frame_2,text="25% Off upto Rs.10000",font="times 20 bold",width=17,bd=6,bg="cadetblue",fg="white",activebackground="light blue",command=lambda:GenBill(discount[1],2))
         Coupon_apply2.place(x=540,y=280)
-        Coupon_apply3=Button(Coupon_frame_2,text="5% Off upto Rs.1000",font="times 20 bold",width=17,bd=6,bg="cadetblue",fg="white",activebackground="light blue",command=lambda:GenBill(discount[2],3))
+        Coupon_apply3=Button(Coupon_frame_2,text="30% Off upto Rs.20000",font="times 20 bold",width=17,bd=6,bg="cadetblue",fg="white",activebackground="light blue",command=lambda:GenBill(discount[2],3))
         Coupon_apply3.place(x=540,y=370)
     else:
         messagebox.showinfo("Bill Generation Confirmation","You can continue shopping now.")
