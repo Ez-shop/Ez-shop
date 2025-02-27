@@ -102,11 +102,11 @@ class Login:
             self.root.destroy()  # Close login window
 
             # Debugging: Print the command being executed
-            print(f"Launching TheEmporium.py with username: {username}")
+            print(f"Launching EZ-shop.py with username: {username}")
             try:
-                subprocess.Popen(['python', 'TheEmporium.py', username])
+                subprocess.Popen(['python', 'EZ-shop.py', username])
             except Exception as e:
-                print(f"Error launching TheEmporium.py: {e}")
+                print(f"Error launching EZ-shop.py: {e}")
         else:
             messagebox.showerror("Error", "Invalid credentials!")
 
